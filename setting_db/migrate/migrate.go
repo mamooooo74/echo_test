@@ -10,5 +10,5 @@ func main() {
 	db := util.NewDB()
 	defer fmt.Println("migrate success")
 	defer util.CloseDB(db)
-	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.User{}, &model.Task{})
 }

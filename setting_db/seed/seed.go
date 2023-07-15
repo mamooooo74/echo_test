@@ -23,4 +23,13 @@ func main() {
 		{Email: "test3@example.comd", Password: password},
 		{Email: "test4@example.comd", Password: password},
 	})
+	db.Create([]model.Task{
+		{Title: "test1"},
+		{Title: "test2"},
+		{Title: "test3"},
+		{Title: "test4"},
+		{Title: "test5"},
+		{Title: "test6"},
+		{Title: "test7"},
+	})
 }
