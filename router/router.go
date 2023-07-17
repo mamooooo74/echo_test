@@ -21,6 +21,8 @@ func NewRouter() *echo.Echo {
 	ac := controller.NewAuthController()
 
 	e.POST("/login", ac.Login)
+	e.GET("/user", ac.GetUser)
+	e.GET("logout", ac.Logout)
 
 	t := e.Group("/tasks")
 	tc := controller.NewTaskController()
